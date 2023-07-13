@@ -1,3 +1,3 @@
-module github.com/tonimaru/goreleaser-test
+module github.com/tonimaru/try-goreleaser
 
 go 1.20

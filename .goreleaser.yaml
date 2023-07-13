@@ -4,14 +4,14 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-    binary: test
+    binary: try-goreleaser
     goos:
       - linux
     goarch:
     - amd64
 
 kos:
-  - repository: ghcr.io/tonimaru/test-ko
+  - repository: ghcr.io/tonimaru/try-goreleaser
     tags:
     - '{{.Version}}'
     - latest
