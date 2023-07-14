@@ -11,13 +11,9 @@ builds:
     - amd64
 
 kos:
-  - id: ko-try-goreleaser
-    build: try-goreleaser
-    repository: ghcr.io/tonimaru/try-goreleaser
+  - repository: ghcr.io/tonimaru/try-goreleaser
     tags:
     - '{{.Version}}'
     - latest
     bare: true
     preserve_import_paths: false
-    platforms:
-    - linux/amd64
