@@ -8,7 +8,7 @@ lint:
 ## Run tests
 .PHONY: test
 test:
-	go test ./...
+	go test -v ./...
 
 ## Show help
 .PHONY: help
