@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: './go.mod'
+        cache-dependency-path: |
+               go.sum
+               .github/workflows/cache-job-lint
       - run: make lint
   test:
     runs-on: ubuntu-latest
@@ -26,6 +29,9 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: './go.mod'
+        cache-dependency-path: |
+               go.sum
+               .github/workflows/cache-job-test
       - run: make test
   release:
     runs-on: ubuntu-latest
